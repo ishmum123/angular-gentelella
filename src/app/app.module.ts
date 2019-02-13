@@ -10,6 +10,7 @@ import { MenuFooterButtonsComponent } from './menu-footer-buttons/menu-footer-bu
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { NavbarTitleComponent } from './navbar-title/navbar-title.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarTitleComponent } from './navbar-title/navbar-title.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
