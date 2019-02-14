@@ -40,16 +40,14 @@ export class AppComponent implements AfterViewInit {
   private addScripts(body?: Element, i = 0) {
     body = body || document.getElementsByTagName('body')[0];
 
-    setTimeout(() => {
-      const script = this.scripts[i];
+    const script = this.scripts[i];
 
-      if (script) {
-        const scriptTag: any = document.createElement('script');
-        scriptTag.src = script;
-        body.appendChild(scriptTag);
-        this.addScripts(body, i + 1);
-      }
-    }, 30);
+    if (script) {
+      const scriptTag: any = document.createElement('script');
+      scriptTag.src = script;
+      scriptTag.onload = () => this.addScripts(body, i + 1);
+      body.appendChild(scriptTag);
+    }
   }
 
 }
