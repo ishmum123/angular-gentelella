@@ -1,6 +1,7 @@
 <div class="container body">
   <div class="main_container">
-    <div class="col-md-3 left_col">
+
+    <div class="col-md-2 left_col">
       <div class="left_col scroll-view">
 
         <app-navbar-title>
@@ -22,13 +23,17 @@
       </div>
     </div>
 
-    <app-top-navigation>
-    </app-top-navigation>
+    <div class="col-md-10">
 
-    <router-outlet></router-outlet>
+      <app-top-navigation>
+      </app-top-navigation>
 
-    <app-footer>
-    </app-footer>
+      <router-outlet></router-outlet>
+
+      <app-footer>
+      </app-footer>
+
+    </div>
 
   </div>
 </div>
