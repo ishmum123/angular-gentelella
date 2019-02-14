@@ -1,16 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { TopNavigationComponent } from './top-navigation/top-navigation.component';
-import { MenuProfileInfoComponent } from './menu-profile-info/menu-profile-info.component';
-import { MenuFooterButtonsComponent } from './menu-footer-buttons/menu-footer-buttons.component';
-import { FooterComponent } from './footer/footer.component';
-import { ContentComponent } from './content/content.component';
-import { NavbarTitleComponent } from './navbar-title/navbar-title.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {SidebarComponent} from './sidebar/sidebar.component';
+import {TopNavigationComponent} from './top-navigation/top-navigation.component';
+import {MenuProfileInfoComponent} from './menu-profile-info/menu-profile-info.component';
+import {MenuFooterButtonsComponent} from './menu-footer-buttons/menu-footer-buttons.component';
+import {FooterComponent} from './footer/footer.component';
+import {ContentComponent} from './content/content.component';
+import {NavbarTitleComponent} from './navbar-title/navbar-title.component';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule, Routes} from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+const ROUTES: Routes = [
+  {path: 'dashboard', component: DashboardComponent},
+  {path: '**', component: ContentComponent}
+];
 
 @NgModule({
   declarations: [
@@ -21,14 +28,17 @@ import {HttpClientModule} from '@angular/common/http';
     MenuFooterButtonsComponent,
     FooterComponent,
     ContentComponent,
-    NavbarTitleComponent
+    NavbarTitleComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

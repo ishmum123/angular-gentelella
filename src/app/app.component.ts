@@ -9,16 +9,41 @@ export class AppComponent implements AfterViewInit {
 
   title = 'gentelella';
 
-  private readonly scripts = [
-    'assets/jquery/jquery.min.js',
-    'assets/bootstrap/js/bootstrap.min.js',
-    'assets/theme/js/custom.min.js'
+  private readonly styles = [
+    'assets/gentelella/bootstrap/css/bootstrap.min.css',
+    'assets/gentelella/font-awesome/css/font-awesome.min.css',
+    'assets/gentelella/nprogress/nprogress.css',
+    'assets/gentelella/iCheck/green.css',
+    'assets/gentelella/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css',
+    'assets/gentelella/bootstrap-daterangepicker/daterangepicker.css',
+    'assets/gentelella/theme/css/custom.min.css'
   ];
 
-  private readonly styles = [
-    'assets/bootstrap/css/bootstrap.min.css',
-    'assets/font-awesome/css/font-awesome.min.css',
-    'assets/theme/css/custom.min.css'
+  private readonly scripts = [
+    'assets/gentelella/jquery/jquery.min.js',
+    'assets/gentelella/bootstrap/js/bootstrap.min.js',
+    'assets/gentelella/fastclick/fastclick.js',
+    'assets/gentelella/Chart/Chart.min.js',
+    'assets/gentelella/gauge/gauge.min.js',
+    'assets/gentelella/skycons/skycons.js',
+    'assets/gentelella/Flot/jquery.flot.js',
+    'assets/gentelella/Flot/jquery.flot.pie.js',
+    'assets/gentelella/Flot/jquery.flot.time.js',
+    'assets/gentelella/Flot/jquery.flot.stack.js',
+    'assets/gentelella/Flot/jquery.flot.resize.js',
+    'assets/gentelella/Flot/jquery.flot.orderBars.js',
+    'assets/gentelella/Flot/jquery.flot.spline.min.js',
+    'assets/gentelella/Flot/curvedLines.js',
+    'assets/gentelella/DateJS/date.js',
+    'assets/gentelella/nprogress/nprogress.js',
+    'assets/gentelella/bootstrap-progressbar/bootstrap-progressbar.min.js',
+    'assets/gentelella/iCheck/icheck.min.js',
+    'assets/gentelella/jqvmap/jquery.vmap.js',
+    'assets/gentelella/jqvmap/jquery.vmap.world.js',
+    'assets/gentelella/jqvmap/jquery.vmap.sampledata.js',
+    'assets/gentelella/moment/moment.min.js',
+    'assets/gentelella/bootstrap-daterangepicker/daterangepicker.js',
+    'assets/gentelella/theme/js/custom.min.js'
   ];
 
   ngAfterViewInit(): void {
