@@ -1,18 +1,17 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {SidebarComponent} from './sidebar/sidebar.component';
-import {TopNavigationComponent} from './top-navigation/top-navigation.component';
-import {MenuProfileInfoComponent} from './menu-profile-info/menu-profile-info.component';
-import {MenuFooterButtonsComponent} from './menu-footer-buttons/menu-footer-buttons.component';
-import {FooterComponent} from './footer/footer.component';
-import {ContentComponent} from './content/content.component';
-import {NavbarTitleComponent} from './navbar-title/navbar-title.component';
+import {AppComponent} from './components/app/app.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {TopNavigationComponent} from './components/top-navigation/top-navigation.component';
+import {MenuProfileInfoComponent} from './components/menu-profile-info/menu-profile-info.component';
+import {MenuFooterButtonsComponent} from './components/menu-footer-buttons/menu-footer-buttons.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {ContentComponent} from './components/content/content.component';
+import {NavbarTitleComponent} from './components/navbar-title/navbar-title.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 const ROUTES: Routes = [
   {path: 'dashboard', component: DashboardComponent},
@@ -33,7 +32,6 @@ const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
